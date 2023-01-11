@@ -2,6 +2,7 @@
 
 # make a new directory and enter it
 mkdir /opt/vgpu_setup
+cp NVIDIA-Linux-x86_64-510.108.03-vgpu-kvm.run /opt/vgpu_setup
 cd /opt/vgpu_setup
 
 # add community repo to apt sources and comment out enterprise repo

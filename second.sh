@@ -8,3 +8,6 @@ chmod +x /opt/vgpu_setup/NVIDIA-Linux-x86_64-510.108.03-vgpu-kvm.run #TODO: test
 echo "Select Yes when asked "
 sleep 5
 /opt/vgpu_setup/NVIDIA-Linux-x86_64-510.108.03-vgpu-kvm.run --dkms
+
+sed -i '30s/include "/opt/vgpu_setup/vgpu_unlock/vgpu_unlock_hooks.c"//' /usr/src/nvidia-510.108.03/nvidia/os-interface.c
+

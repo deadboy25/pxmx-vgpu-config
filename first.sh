@@ -1,7 +1,11 @@
 #! /bin/bash
 
-# make a new directory and enter it
+# create required directories
 mkdir /opt/vgpu_setup
+mkdir /etc/systemd/system/nvidia-vgpud.service.d
+mkdir /etc/systemd/system/nvidia-vgpu-mgr.service.d
+
+# populate working directory and enter it
 cp NVIDIA-Linux-x86_64-510.108.03-vgpu-kvm.run /opt/vgpu_setup
 cd /opt/vgpu_setup
 

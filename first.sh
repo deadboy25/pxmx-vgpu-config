@@ -6,7 +6,9 @@ mkdir /etc/systemd/system/nvidia-vgpud.service.d
 mkdir /etc/systemd/system/nvidia-vgpu-mgr.service.d
 
 # populate working directory and enter it
-cp NVIDIA-Linux-x86_64-510.108.03-vgpu-kvm.run /opt/vgpu_setup
+mv NVIDIA-Linux-x86_64-510.108.03-vgpu-kvm.run /opt/vgpu_setup
+cp vgpu_unlock.conf /etc/systemd/system/nvidia-vgpud.service.d
+mv vgpu_unlock.conf /etc/systemd/system/nvidia-vgpu-mgr.service.d
 cd /opt/vgpu_setup
 
 # add community repo to apt sources and comment out enterprise repo
